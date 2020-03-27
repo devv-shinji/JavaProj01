@@ -1,8 +1,8 @@
-package ver04;
+package ver05;
 
 import java.util.Scanner;
 
-public class PhoneBookManager {
+public class PhoneBookManager implements SubMenuItem{
 
 	private PhoneInfo[] phoneInfo;
 	private int numOfPhoneInfo;
@@ -27,11 +27,11 @@ public class PhoneBookManager {
 		iPhone = scan1.next();
 		
 		switch (iChoice) {
-		case 1:
+		case NORMAL:
 			User user1 = new User(iName, iPhone);
 			phoneInfo[numOfPhoneInfo++] = user1;
 			break;
-		case 2:
+		case SCHOOL:
 			System.out.println("전공:");
 			iMajor = scan1.next();
 			System.out.println("학년:");
@@ -39,7 +39,7 @@ public class PhoneBookManager {
 			PhoneSchoolInfo user2 = new PhoneSchoolInfo(iName, iPhone, iMajor, iGrade);
 			phoneInfo[numOfPhoneInfo++] = user2;
 			break;
-		case 3:
+		case COMPANY:
 			System.out.println("회사:");
 			iCompany = scan1.next();
 			PhoneCompanyInfo user3 = new PhoneCompanyInfo(iName, iPhone, iCompany);

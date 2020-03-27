@@ -28,20 +28,21 @@ public class PhoneBookVer04 {
 			
 			switch (choice) {
 			case 1:
-				manager.addUser();
+				manager.dataInput();
 				break;
 			case 2:
-				manager.searchUser();
+				manager.dataSearch();
 				break;
 			case 3:
-				manager.deleteUser();
+				manager.dataDelete();
 				break;
 			case 4:
-				manager.showAllData();
+				manager.dataAllShow();
 				break;
 			case 5:
 				System.out.println("프로그램을 종료합니다.");
-				return;
+				System.exit(0);
+//				return;
 			}
 			
 		}////end of while

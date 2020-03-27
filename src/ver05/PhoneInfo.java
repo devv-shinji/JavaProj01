@@ -1,4 +1,4 @@
-package ver03;
+package ver05;
 
 import java.util.Scanner;
 
@@ -9,28 +9,26 @@ abstract class PhoneInfo {
 	String phone;
 	String birth;
 	
-	public PhoneInfo(String name, String phone, String birth) {
+	public PhoneInfo(String name, String phone) {
 		this.name = name;
 		this.phone = phone;
-		this.birth = birth;
 	}
 	
 	public void dataAllShow() {
 		System.out.println("이름: "+ name);
 		System.out.println("전화번호: "+ phone);
-		System.out.println("생일: "+ birth);
 	}
 	
 }
-
+//일반친구
 class User extends PhoneInfo {
-	public User(String name, String phone, String birth) {
-		super(name, phone, birth);
+	public User(String name, String phone) {
+		super(name, phone);
 	}
 	
 	@Override
 	public void dataAllShow() {
-		System.out.println("==전체정보==");
+		System.out.println("-----일반친구-----");
 		super.dataAllShow();
 	}
 }

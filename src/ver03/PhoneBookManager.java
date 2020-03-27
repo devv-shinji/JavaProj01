@@ -12,7 +12,7 @@ public class PhoneBookManager {
 		numOfPhoneInfo = 0;
 	}
 	
-	public void addUser() {
+	public void dataInput() {
 		Scanner scan = new Scanner(System.in);
 		String iName, iPhone, iBirth;
 		
@@ -28,7 +28,7 @@ public class PhoneBookManager {
 		PhoneInfo[numOfPhoneInfo++] = user;
 	}
 	
-	public void searchUser() {
+	public void dataSearch() {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("검색할 이름을 입력하세요:");
 		String searchName = scan.nextLine();
@@ -36,13 +36,13 @@ public class PhoneBookManager {
 		for (int i=0; i<numOfPhoneInfo; i++) {
 			if(searchName.compareTo(PhoneInfo[i].name)==0) {
 				System.out.println("검색중인이름: "+ PhoneInfo[i].name);
-				PhoneInfo[i].showAllData();
+				PhoneInfo[i].dataAllShow();
 				System.out.println("요청한 정보를 찾았습니다.");
 			}
 		}
 	}
 	
-	public void deleteUser() {
+	public void dataDelete() {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("삭제할 이름을 입력하세요:");
 		String deleteName = scan.nextLine();
@@ -67,9 +67,9 @@ public class PhoneBookManager {
 		}
 	}
 	
-	public void showAllData() {
+	public void dataAllShow() {
 		for (int i=0; i<numOfPhoneInfo; i++) {
-			PhoneInfo[i].showAllData();
+			PhoneInfo[i].dataAllShow();
 		}
 		System.out.println("==전체정보가 출력되었습니다==");
 	}

@@ -1,20 +1,19 @@
 import java.util.Scanner;
 
-import ver03.PhoneBookManager;
+import ver05.PhoneBookManager;
+import ver05.MenuItem;
 
-
-
-public class PhoneBookVer03 {
+public class PhoneBookVer05 implements MenuItem{
 
 	//프로그램에서의 입력메뉴 출력
 	public static void printMenu() {
-		System.out.println("==원하는 메뉴를 선택하세요==");
+		System.out.println("\n==원하는 메뉴를 선택하세요==");
 		System.out.println("1.데이터 입력");
 		System.out.println("2.데이터 검색");
 		System.out.println("3.데이터 삭제");
 		System.out.println("4.주소록 출력");
 		System.out.println("5.프로그램 종료");
-		System.out.print("메뉴선택>>>");
+		System.out.print("메뉴선택>>>\n");
 	}
 	
 	
@@ -29,19 +28,19 @@ public class PhoneBookVer03 {
 			int choice = scan.nextInt();
 			
 			switch (choice) {
-			case 1:
+			case INPUT:
 				manager.dataInput();
 				break;
-			case 2:
+			case SEARCH:
 				manager.dataSearch();
 				break;
-			case 3:
+			case DELETE:
 				manager.dataDelete();
 				break;
-			case 4:
+			case SHOW:
 				manager.dataAllShow();
 				break;
-			case 5:
+			case EXIT:
 				System.out.println("프로그램을 종료합니다.");
 				return;
 			}
