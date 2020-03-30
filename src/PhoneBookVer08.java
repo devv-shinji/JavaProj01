@@ -22,11 +22,11 @@ public class PhoneBookVer08 implements MenuItem{
 	public static void main(String[] args)  {
 	
 		PhoneBookManager manager = new PhoneBookManager(); 
+		manager.loadData();
 		
 		
 		while (true) {
 			printMenu();
-			manager.loadData();
 			Scanner scan = new Scanner(System.in);
 			
 			try {
