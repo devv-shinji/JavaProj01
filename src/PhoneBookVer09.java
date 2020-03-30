@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-import ver03.PhoneBookManager;
+import ver09.PhoneBookManager;
 
 
 
@@ -20,7 +20,7 @@ public class PhoneBookVer09 {
 	
 	public static void main(String[] args) {
 	
-		PhoneBookManager manager = new PhoneBookManager(100); //유저 100개까지 저장가능
+		PhoneBookManager manager = new PhoneBookManager(); //유저 100개까지 저장가능
 		
 		while (true) {
 			
