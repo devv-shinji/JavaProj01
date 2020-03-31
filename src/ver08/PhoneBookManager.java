@@ -42,6 +42,7 @@ public class PhoneBookManager implements SubMenuItem {
 					
 					if(num==1) {
 						searchFlag = true;
+						set.remove(phoneinfo);
 					}
 					else {
 						searchFlag = false;

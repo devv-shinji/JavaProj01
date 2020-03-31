@@ -35,11 +35,12 @@ public class PhoneBookManager implements SubMenuItem {
 			while(itr.hasNext()) {
 				PhoneInfo phoneinfo = itr.next();
 				if(iName.equals(phoneinfo.name)) {
-					System.out.println("동일한 이름이 존재합니다. 계속 진행하시겠습니까? Y:1, N:2");
+					System.out.println("동일한 이름이 존재합니다. 덮어씌우겠습니까? Y:1, N:2");
 					int num = scan1.nextInt();
 					
 					if(num==1) {
 						searchFlag = true;
+						set.remove(phoneinfo);
 					}
 					else {
 						searchFlag = false;
