@@ -26,7 +26,6 @@ abstract class PhoneInfo implements Serializable{
 		int hc1 = name.hashCode();
 		int hc2 = phone.hashCode();
 		
-//		System.out.println(hc1+" "+hc2);
 		int result = hc1 + hc2;
 		
 		return result;
